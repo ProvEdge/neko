@@ -5,14 +5,10 @@
     </template>
     <template v-else>
       <main class="neko-main">
-        <div class="header-container">
-          <neko-header />
-        </div>
         <div class="video-container">
           <neko-video ref="video" />
         </div>
         <div class="room-container">
-          <neko-members />
           <div class="room-menu">
             <div class="settings">
               <neko-menu />
@@ -26,9 +22,6 @@
           </div>
         </div>
       </main>
-      <neko-side v-if="side" />
-      <neko-connect v-if="!connected" />
-      <neko-about v-if="about" />
       <notifications group="neko" position="top left" style="top: 50px;" />
     </template>
   </div>
@@ -70,7 +63,7 @@
 
       .room-container {
         background: $background-tertiary;
-        height: $controls-height;
+        height: 45px;
         max-width: 100%;
         flex-shrink: 0;
         flex-direction: column;
